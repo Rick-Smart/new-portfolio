@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../../components/Layout";
 import { SectionTitle, Paragraph } from "../../styles";
-import { WorkItem, WorkTitle, JobTitle } from "./styles";
+import { WorkItem, WorkTitle, JobTitle, JobLocation } from "./styles";
 
 const Work = ({ user }) => {
   return (
@@ -13,11 +13,11 @@ const Work = ({ user }) => {
             <WorkItem key={i}>
               <WorkTitle>{work.position}</WorkTitle>
               <div>
-                <JobTitle>{work.company}</JobTitle> <span>{work.location}</span>
+                <JobTitle>{work.company}</JobTitle> <JobLocation>{work.location}</JobLocation>
                 <span> &sdot; </span>
-                <span>
+                <JobLocation>
                   {work.start.year} to {work.end.year}
-                </span>
+                </JobLocation>
               </div>
               <Paragraph>{work.summary}</Paragraph>
             </WorkItem>

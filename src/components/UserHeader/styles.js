@@ -18,12 +18,25 @@ export const Header = styled.div`
 
 export const Image = styled.img`
   width: 200px;
-  margin-right: 1rem;
-  border-radius: 2px;
+  margin-left: 3rem;
+  border: 5px double white;
+  border-radius: 50%;
+`;
+
+export const HeaderInfo = styled.div`
+  margin-left: 5rem;
+`;
+export const HeaderText = styled.h2`
+  font-size: 5rem;
+  font-family: BP dots;
+`;
+export const HeaderP = styled.p`
+  font-size: 1.4rem;
+  font-weight: bold;
 `;
 
 export const ViewResumeLink = styled.a`
-  display: flex;
+  display: none;
   text-decoration: none;
   padding: 0.75rem 1.5rem;
   font-weight: bold;

@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import { ArrowRight16 } from "@carbon/icons-react";
 
-import { HeaderContainer, Header, Image, ViewResumeLink } from "./styles";
+import { HeaderContainer, HeaderP, Header, Image, ViewResumeLink, HeaderText, HeaderInfo } from "./styles";
 
 const UserHeader = ({ user }) => {
   const location = useLocation();
@@ -11,8 +11,8 @@ const UserHeader = ({ user }) => {
     <HeaderContainer isHome={location.pathname === "/"}>
       <Header>
         <Image src={user.basics.picture} />
-        <div>
-          <h2>{user.basics.name}</h2>
+        <HeaderInfo>
+          <HeaderText>{user.basics.name}</HeaderText>
           <h4>
             <a
               href={`https://gitconnected.com/${user.basics.username}`}
@@ -22,13 +22,10 @@ const UserHeader = ({ user }) => {
               @{user.basics.username}
             </a>
           </h4>
-          <p>{user.basics.label}</p>
-          <p>Coding in {user.basics.region}</p>
-          <p>
-            {user.basics.yearsOfExperience} years of experience as a developer
-          </p>
-          <p>{user.basics.headline}</p>
-        </div>
+          <HeaderP>{user.basics.label}</HeaderP>
+          <HeaderP>Coding in {user.basics.region}</HeaderP>
+          <HeaderP>{user.basics.headline}</HeaderP>
+        </HeaderInfo>
       </Header>
       <div>
         <ViewResumeLink
