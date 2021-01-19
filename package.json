@@ -1,7 +1,6 @@
 {
   "name": "new-portfolio",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "@carbon/icons-react": "^10.23.0",
     "@carbon/themes": "^10.25.0",
